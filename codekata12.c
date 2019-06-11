@@ -12,5 +12,6 @@ while(a)
 }
 
 if(sum==safe)
-printf("Palindrome");
+printf("yes");
+    else printf("no");
 }
