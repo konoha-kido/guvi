@@ -17,5 +17,6 @@ printf("yes");return 0;
 }
 else {printf("no"); return 0;}
 }
-
+}
+else printf("no");
 }
