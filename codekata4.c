@@ -9,5 +9,5 @@ scanf("%c",&a);
   return 0;}
  
 
-else printf("Yes");
+else printf("Alphabet");
 }
