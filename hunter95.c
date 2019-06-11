@@ -18,12 +18,13 @@ for(i=0;i<=n;i++)
 
 arr[0]=arr[1]=0;
 printf("2");
-for(i=3;i<n;i++)
+for(i=2;i<n;i++)
 {
 
+    
     if(arr[i]==1)
     {
-        printf(" %d",i);
+        if(i!=2)printf(" %d",i);
     
         for(int j=i;j<max;j+=i)
         {
