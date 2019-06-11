@@ -4,7 +4,7 @@
 int main()
 {
     char str[1000];
-    scanf("%s",str);
+    scanf("%[^\n]s",str);
     
     printf("%s Answer",str);
     
