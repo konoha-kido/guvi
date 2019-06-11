@@ -25,7 +25,7 @@ for(i=3;i<n;i++)
     {
         printf(" %d",i);
     
-        for(int j=i*i;j<max;j+=i)
+        for(int j=i;j<max;j+=i)
         {
             arr[j]=0;
         }
