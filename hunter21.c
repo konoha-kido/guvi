@@ -23,10 +23,10 @@ for( i=0;i<m;i++)
         
         for( k=0;k<m;k++)
         newmatrix[k][j]=0;
-        printf("new %d %d\n",k,j);
+        //printf("new %d %d\n",k,j);
         for( l=0;l<n;l++)
         newmatrix[i][l]=0;
-        printf("new %d %d\n",i,l);
+        //printf("new %d %d\n",i,l);
        }
     }
 }
