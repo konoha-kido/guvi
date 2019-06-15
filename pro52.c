@@ -25,7 +25,7 @@ int main()
   ac=dist(a,c);
   bd=dist(b,d);
 
- printf("%d %d %d %d\n",ab,bc,cd,da);
+ //printf("%d %d %d %d\n",ab,bc,cd,da);
 
   if(ab==bc==cd==da)
   {
