@@ -43,8 +43,8 @@ int main()
 
 
   if(flag==1)
-    printf("Yes");
-  else printf("No");
+    printf("yes");
+  else printf("no");
 
 
 }
