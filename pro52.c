@@ -1,29 +1,50 @@
 
 #include<stdio.h>
 #include<math.h>
-int dist(int a,int b, int x, int y)
+typedef struct point
 {
-    int dist=sqrt((y-b)*(y-b)+(x-a)*(x-a));
+    int x,y;
+}Point;
+int dist(Point a, Point b)
+{
+    int dist=sqrt((b.y-a.y)*(b.y-a.y)+(a.x-b.x)*(a.x-b.x));
     return dist;
 
 }
 int main()
 {
-  int x1,x2,x3,x4,y1,y2,y3,y4;
-  scanf("%d %d %d %d %d %d %d %d",&x1,&y1,&x2,&y2,&x3,&y3,&x4,&y4);
+  Point a,b,c,d;int flag=1;
+  scanf("%d %d %d %d %d %d %d %d",&a.x,&a.y,&b.x,&b.y,&c.x,&c.y,&d.x,&d.y);
 
-  int la,lb,lc,ld;
-  la=dist(x1,y1,x2,y2);
-  lb=dist(x1,y1,x4,y4);
-  lc=dist(x3,y3,x2,y2);
-  ld=dist(x4,y4,x2,y2);
+  int ab,bc,cd,da; //sides
+  int ac,bd;//diag
+  ab=dist(a,b);
+  bc=dist(b,c);
+  cd=dist(c,d);
+  da=dist(d,a);
+  ac=dist(a,c);
+  bd=dist(b,d);
 
- //printf("%d %d %d %d",la,lb,lc,ld);
+ printf("%d %d %d %d\n",ab,bc,cd,da);
 
-  if(la==lb==lc==ld)
+  if(ab==bc==cd==da)
   {
+    flag=1;
 
-      printf("yes");
+    if(ac!=bd) flag=0;
+
+    if((ac*ac)!=ab*ab+bc*bc)
+        flag=0;
+    if(bd*bd!=bc*bc+cd*cd)
+        flag=0;
   }
-  else printf("no");
+  else flag=0;
+
+
+
+  if(flag==1)
+    printf("Yes");
+  else printf("No");
+
+
 }
